@@ -143,6 +143,8 @@ class Disc_Transformer(nn.Module):
     return x
 
 
+# denoiser의 Fair-Unet과 discriminator의 Fair-Unet의 차이점 = convolution layer의 필터 크기(f1, f2, f3, fb)
+
 class efficient_Unet(nn.Module):
   def __init__(self, in_ch, out_ch, filter_base=32, bias=False):
     super(efficient_Unet, self).__init__()
